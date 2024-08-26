@@ -11,6 +11,8 @@ class Booking extends Model
 
     protected $fillable = ['room_id', 'user_id', 'start_time', 'end_time'];
 
+    protected $dates = ['start_time', 'end_time'];
+
     public function room()
     {
         return $this->belongsTo(Room::class);
